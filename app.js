@@ -43,7 +43,7 @@ app.post('/api/beacons', function(req, res){
   });
 });
 
-app.get('api/beacons/:beacons_id', function (req, res){
+app.get('/api/beacons/:beacons_id', function (req, res){
   Beacon.finByID(req.params.beacon_id).then(function(err, beacon){
     if (err){
       res.send(err)
